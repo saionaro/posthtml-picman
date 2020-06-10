@@ -6,7 +6,11 @@ const defBreakpoints = {
   tablet: 1024,
 };
 
-const defineProp = (obj: object, key: string, value: any): void => {
+const defineProp = (
+  obj: Record<string, string>,
+  key: string,
+  value: string
+): void => {
   Object.defineProperty(obj, key, {
     value: value,
     enumerable: true,
@@ -135,7 +139,7 @@ const constructPicture = ({
   };
 };
 
-export default (options: PluginOptions) => {
+export default (options: PluginOptions): PostHTML.Plugin<void> => {
   const breakpoints = options.breakpoints || defBreakpoints;
   const retinaSuffix = options.retinaSuffix || "-2x";
   const cdnPrefix = options.cdnPrefix || "";
