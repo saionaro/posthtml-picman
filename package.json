@@ -1,7 +1,7 @@
 {
   "name": "posthtml-picman",
   "version": "1.0.0",
-  "description": "",
+  "description": "HTML pictures simplified",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -10,7 +10,17 @@
     "release": "semantic-release",
     "check-types": "tsc --noEmit"
   },
-  "keywords": [],
+  "repository": "git@github.com:Saionaro/posthtml-picman.git",
+  "bugs": {
+    "url": "https://github.com/Saionaro/posthtml-picman/issues"
+  },
+  "homepage": "https://github.com/Saionaro/posthtml-picman",
+  "keywords": [
+    "html",
+    "posthtml",
+    "plugin",
+    "picture"
+  ],
   "author": "Saionaro <shibakow@gmail.com>",
   "license": "MIT",
   "devDependencies": {
