@@ -143,7 +143,8 @@ export default (options: PluginOptions): PostHTML.Plugin<void> => {
   const breakpoints = options.breakpoints || defBreakpoints;
   const retinaSuffix = options.retinaSuffix || "-2x";
   const cdnPrefix = options.cdnPrefix || "";
-  const mobileFirst = Boolean(options.mobileFirst) || true;
+  const mobileFirst =
+    options.mobileFirst === undefined ? true : Boolean(options.mobileFirst);
 
   return function posthtmlPicer(tree: PostHTML.Node) {
     tree.match({ tag: "pic" }, (node) => {
