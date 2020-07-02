@@ -14,6 +14,7 @@ const defineProp = (
   Object.defineProperty(obj, key, {
     value: value,
     enumerable: true,
+    writable: true,
   });
 };
 
